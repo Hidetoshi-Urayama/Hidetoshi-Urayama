@@ -578,7 +578,7 @@ class Application extends ApplicationTrait
 
         $this['security.access_rules'] = array(
             array("^/{$this['config']['admin_route']}/login", 'IS_AUTHENTICATED_ANONYMOUSLY', $channel),
-            //array("^/{$this['config']['admin_route']}/", 'ROLE_ADMIN', $channel),
+            array("^/{$this['config']['admin_route']}/", 'ROLE_ADMIN', $channel),
             array('^/mypage/login', 'IS_AUTHENTICATED_ANONYMOUSLY', $channel),
             array('^/mypage/withdraw_complete', 'IS_AUTHENTICATED_ANONYMOUSLY', $channel),
             array('^/mypage/change', 'IS_AUTHENTICATED_FULLY', $channel),
